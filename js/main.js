@@ -242,7 +242,7 @@ function initTypewriter() {
 
   const roles = [
     "AI Specialist",
-    "Full-Stack Engineer (Java / React)",
+    "Full-Stack Engineer (Java / SpringBoot)",
     "Network Security Professional"
   ];
 
