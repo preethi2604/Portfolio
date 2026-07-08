@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Preethi P J — AI Specialist &amp; Full-Stack Engineer</title>
+  <meta name="description" content="Portfolio of Preethi P J — AI Specialist, Full-Stack Engineer (Java, Spring Boot, React.js) and Network Security professional.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22 fill=%22%234FD1E8%22>P</text></svg>">
+</head>
+<body>
+
+  <!-- ===================== LOADING SCREEN ===================== -->
+  <div id="loading-screen" aria-hidden="true">
+    <div class="boot-log" id="boot-log"></div>
+    <div class="boot-bar"><div class="boot-bar-fill" id="boot-bar-fill"></div></div>
+  </div>
+
+  <!-- ===================== CUSTOM CURSOR ===================== -->
+  <div class="cursor-dot" id="cursor-dot"></div>
+  <div class="cursor-ring" id="cursor-ring"></div>
+
+  <!-- ===================== BACKGROUND CANVAS (network topology) ===================== -->
+  <canvas id="network-canvas" aria-hidden="true"></canvas>
+  <div class="mouse-glow" id="mouse-glow" aria-hidden="true"></div>
+
+  <!-- ===================== STICKY NAVBAR ===================== -->
+  <header class="navbar" id="navbar">
+    <nav class="nav-container">
+      <a href="#home" class="nav-logo">P<span>J</span><em>.dev</em></a>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home" class="nav-link active-link" data-section="home"><span>01</span>Home</a></li>
+        <li><a href="#about" class="nav-link" data-section="about"><span>02</span>About</a></li>
+        <li><a href="#skills" class="nav-link" data-section="skills"><span>03</span>Skills</a></li>
+        <li><a href="#experience" class="nav-link" data-section="experience"><span>04</span>Experience</a></li>
+        <li><a href="#projects" class="nav-link" data-section="projects"><span>05</span>Projects</a></li>
+        <li><a href="#education" class="nav-link" data-section="education"><span>06</span>Education</a></li>
+        <li><a href="#contact" class="nav-link" data-section="contact"><span>07</span>Contact</a></li>
+      </ul>
+
+      <a href="resume/Preethi_PJ_Resume.pdf" download class="btn btn-ghost nav-resume-btn">
+        <i class="fa-solid fa-arrow-down-long"></i> Resume
+      </a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ===================== HERO ===================== -->
+    <section id="home" class="hero">
+      <div class="hero-container">
+        <div class="hero-text">
+          <p class="eyebrow"><span class="status-dot"></span> AVAILABLE FOR OPPORTUNITIES · BENGALURU, KARNATAKA</p>
+          <h1 class="hero-title">
+            Preethi P J
+          </h1>
+          <h2 class="hero-role">
+            <span class="typewriter" id="typewriter"></span><span class="cursor-blink">|</span>
+          </h2>
+          <p class="hero-summary">
+            AI Specialist currently building AI-driven data automation and workflow optimization.
+            I engineer responsive interfaces with <strong>React.js</strong> and robust backends with
+            <strong>Java, Spring Boot &amp; Hibernate</strong> — with a foundation in securing
+            mission-critical network infrastructure at Bharat Electronics Limited.
+          </p>
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary anchor-link">
+              <span>View Projects</span><i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a href="resume/Preethi_PJ_Resume.pdf" download class="btn btn-outline">
+              <i class="fa-solid fa-file-arrow-down"></i> Download Résumé
+            </a>
+          </div>
+
+          <div class="hero-contact-row">
+            <a href="mailto:preethipj23@gmail.com"><i class="fa-solid fa-envelope"></i> preethipj23@gmail.com</a>
+            <a href="tel:+919353739605"><i class="fa-solid fa-phone"></i> +91 93537 39605</a>
+            <a href="https://linkedin.com/in/preethi-pj-810914250" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hex-frame">
+            <svg viewBox="0 0 220 240" class="hex-svg" aria-hidden="true">
+              <polygon points="110,4 210,60 210,180 110,236 10,180 10,60" />
+            </svg>
+            <img src="images/profile.png" alt="Portrait of Preethi P J" class="hero-photo">
+            <div class="hex-ping"></div>
+          </div>
+          <div class="hero-badge hero-badge--top"><i class="fa-solid fa-shield-halved"></i> Network Security</div>
+          <div class="hero-badge hero-badge--bottom"><i class="fa-solid fa-brain"></i> Applied AI</div>
+        </div>
+      </div>
+
+      <a href="#about" class="scroll-cue anchor-link" aria-label="Scroll to About section">
+        <span>SCROLL</span>
+        <i class="fa-solid fa-chevron-down"></i>
+      </a>
+    </section>
+
+    <!-- ===================== ABOUT / STATS ===================== -->
+    <section id="about" class="section about">
+      <div class="section-head">
+        <p class="eyebrow">02 — About</p>
+        <h2>Signal, not just noise.</h2>
+        <p class="section-sub">
+          A snapshot of the systems I've kept running and the code I've shipped — from copper cabling to component trees.
+        </p>
+      </div>
+
+      <div class="stats-grid">
+        <div class="stat-card glass-card">
+          <span class="stat-number" data-target="99.9" data-suffix="%">0</span>
+          <span class="stat-label">Network Uptime<br>Maintained at BEL</span>
+        </div>
+        <div class="stat-card glass-card">
+          <span class="stat-number" data-target="50" data-suffix="+">0</span>
+          <span class="stat-label">Technical Tickets<br>Resolved Monthly</span>
+        </div>
+        <div class="stat-card glass-card">
+          <span class="stat-number" data-target="3" data-suffix="">0</span>
+          <span class="stat-label">Core Stacks<br>Java · React · AI</span>
+        </div>
+        <div class="stat-card glass-card">
+          <span class="stat-number" data-target="21" data-suffix="">0</span>
+          <span class="stat-label">Hand Landmarks Tracked<br>in Real Time (CV Project)</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SKILLS ===================== -->
+    <section id="skills" class="section skills">
+      <div class="section-head">
+        <p class="eyebrow">03 — Skills</p>
+        <h2>The stack, mapped like a network.</h2>
+        <p class="section-sub">Hover a node to see what runs on it.</p>
+      </div>
+
+      <div class="skills-grid">
+
+        <div class="skill-card glass-card" data-tilt>
+          <div class="skill-card-head">
+            <i class="fa-solid fa-code"></i>
+            <h3>Languages</h3>
+          </div>
+          <ul class="skill-tags">
+            <li>Java (Core &amp; Advanced)</li>
+            <li>JavaScript (ES6+)</li>
+            <li>SQL</li>
+          </ul>
+        </div>
+
+        <div class="skill-card glass-card" data-tilt>
+          <div class="skill-card-head">
+            <i class="fa-solid fa-display"></i>
+            <h3>Web Technologies</h3>
+          </div>
+          <ul class="skill-tags">
+            <li>React.js</li>
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>Hibernate</li>
+          </ul>
+        </div>
+
+        <div class="skill-card glass-card" data-tilt>
+          <div class="skill-card-head">
+            <i class="fa-solid fa-layer-group"></i>
+            <h3>Frameworks</h3>
+          </div>
+          <ul class="skill-tags">
+            <li>Spring</li>
+            <li>Spring Boot</li>
+          </ul>
+        </div>
+
+        <div class="skill-card glass-card" data-tilt>
+          <div class="skill-card-head">
+            <i class="fa-solid fa-database"></i>
+            <h3>Databases &amp; Tools</h3>
+          </div>
+          <ul class="skill-tags">
+            <li>MySQL</li>
+            <li>MySQL Workbench</li>
+            <li>Eclipse</li>
+            <li>VS Code</li>
+            <li>IntelliJ IDEA</li>
+          </ul>
+        </div>
+
+        <div class="skill-card glass-card" data-tilt>
+          <div class="skill-card-head">
+            <i class="fa-solid fa-network-wired"></i>
+            <h3>Networking &amp; Security</h3>
+          </div>
+          <ul class="skill-tags">
+            <li>LAN / WAN Configuration</li>
+            <li>IP Addressing</li>
+            <li>Routing &amp; Switching</li>
+          </ul>
+        </div>
+
+        <div class="skill-card glass-card" data-tilt>
+          <div class="skill-card-head">
+            <i class="fa-solid fa-brain"></i>
+            <h3>AI &amp; Data Analysis</h3>
+          </div>
+          <ul class="skill-tags">
+            <li>AI-assisted Development</li>
+            <li>Excel — Pivot Tables</li>
+            <li>Dashboards &amp; Data Cleaning</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================== EXPERIENCE / TIMELINE ===================== -->
+    <section id="experience" class="section experience">
+      <div class="section-head">
+        <p class="eyebrow">04 — Experience</p>
+        <h2>Where the uptime went.</h2>
+      </div>
+
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass-card">
+            <p class="timeline-date"><i class="fa-solid fa-calendar"></i> May 2026 — Present</p>
+            <h3>Junior Software Engineer</h3>
+            <p class="timeline-org">Hourly Recruit Tech Labs</p>
+            <ul>
+              <li>Developed backend applications using Java 21, Spring Boot, Spring Data JPA, Hibernate, and MySQL.</li>
+              <li>Designed and implemented secure RESTful APIs with JWT Authentication.</li>
+              <li>Documented and tested APIs using Swagger UI and Postman.</li>
+              <li>Managed source code using Git and GitHub, including branching, commits, and pull requests.</li>
+              <li>Built and managed projects using Maven while following layered architecture.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass-card">
+            <p class="timeline-date"><i class="fa-solid fa-calendar"></i> Jan 2024 — Jan 2025</p>
+            <h3>Graduate Apprentice Trainee Engineer</h3>
+            <p class="timeline-org">Bharat Electronics Limited (BEL)</p>
+            <ul>
+              <li>Administered and optimized large-scale LAN networks, configuring routers and switches to ensure 99.9% network uptime for mission-critical operations.</li>
+              <li>Strengthened cyber security posture by monitoring network traffic, identifying vulnerabilities, and documenting security incidents to comply with federal audit standards.</li>
+              <li>Troubleshot complex hardware and server issues, resolving over 50+ technical tickets monthly and maintaining seamless connectivity across departments.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================== PROJECTS ===================== -->
+    <section id="projects" class="section projects">
+      <div class="section-head">
+        <p class="eyebrow">05 — Projects</p>
+        <h2>Selected build.</h2>
+        <p class="section-sub">Filter by focus area.</p>
+      </div>
+
+      <div class="project-filters" id="project-filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="ai">AI / ML</button>
+        <button class="filter-btn" data-filter="cv">Computer Vision</button>
+        <button class="filter-btn" data-filter="accessibility">Accessibility</button>
+      </div>
+
+      <div class="project-grid" id="project-grid">
+        <article class="project-card glass-card" data-tags="ai cv accessibility">
+          <div class="project-card-top">
+            <i class="fa-solid fa-hand-pointer project-icon"></i>
+            <div class="project-tags">
+              <span>AI / ML</span><span>Computer Vision</span><span>Accessibility</span>
+            </div>
+          </div>
+          <h3>AI Virtual Mouse Using Machine Learning</h3>
+          <ul>
+            <li>Architected a gesture-controlled interface using Python and Computer Vision, allowing for 100% touchless navigation of OS functions.</li>
+            <li>Leveraged MediaPipe to track 21 distinct hand landmarks in real-time, achieving high-precision cursor movement with minimal latency.</li>
+            <li>Integrated PyAutoGUI and OpenCV to map specific finger gestures to mouse actions (click, scroll, drag), improving accessibility for users with physical impairments.</li>
+          </ul>
+          <div class="project-stack">
+            <span>Python</span><span>OpenCV</span><span>MediaPipe</span><span>PyAutoGUI</span>
+          </div>
+        </article>
+
+        <!-- Placeholder card: shown only if a filter matches nothing else, guides future additions -->
+        <article class="project-card glass-card project-card--placeholder" data-tags="placeholder" hidden>
+          <div class="project-card-top">
+            <i class="fa-solid fa-plus project-icon"></i>
+          </div>
+          <h3>More builds in progress</h3>
+          <p>Additional case studies will be documented here as they ship.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===================== EDUCATION / CERTS / LANGUAGES ===================== -->
+    <section id="education" class="section education">
+      <div class="section-head">
+        <p class="eyebrow">06 — Education</p>
+        <h2>Foundations.</h2>
+      </div>
+
+      <div class="edu-grid">
+        <div class="edu-col">
+          <h3><i class="fa-solid fa-graduation-cap"></i> Education</h3>
+          <div class="edu-item glass-card">
+            <p class="edu-year">2023</p>
+            <h4>B.E. in Computer Science &amp; Engineering</h4>
+            <p>Government Engineering College, Haveri</p>
+          </div>
+          <div class="edu-item glass-card">
+            <p class="edu-year">2020</p>
+            <h4>Diploma in Computer Science</h4>
+            <p>Government Polytechnic, Harihar</p>
+          </div>
+        </div>
+
+        <div class="edu-col">
+          <h3><i class="fa-solid fa-certificate"></i> Certificates</h3>
+          <div class="edu-item glass-card">
+            <p class="edu-year">6 Months</p>
+            <h4>Java Full Stack Web Development</h4>
+            <p>TAP Academy, Bangalore</p>
+          </div>
+          <div class="edu-item glass-card">
+            <p class="edu-year">1 Year</p>
+            <h4>Graduate Apprenticeship Training</h4>
+            <p>Bharat Electronics Limited</p>
+          </div>
+        </div>
+
+        <div class="edu-col">
+          <h3><i class="fa-solid fa-language"></i> Languages</h3>
+          <div class="lang-list">
+            <span class="lang-pill glass-card">English</span>
+            <span class="lang-pill glass-card">Kannada</span>
+            <span class="lang-pill glass-card">Hindi</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACT ===================== -->
+    <section id="contact" class="section contact">
+      <div class="section-head">
+        <p class="eyebrow">07 — Contact</p>
+        <h2>Let's establish a connection.</h2>
+        <p class="section-sub">Open to full-stack, AI and network-security roles.</p>
+      </div>
+
+      <div class="contact-wrap">
+        <div class="contact-info">
+          <a class="contact-line" href="mailto:preethipj23@gmail.com">
+            <i class="fa-solid fa-envelope"></i>
+            <div><span>Email</span><p>preethipj23@gmail.com</p></div>
+          </a>
+          <a class="contact-line" href="tel:+919353739605">
+            <i class="fa-solid fa-phone"></i>
+            <div><span>Phone</span><p>+91 93537 39605</p></div>
+          </a>
+          <a class="contact-line" href="https://linkedin.com/in/preethi-pj-810914250" target="_blank" rel="noopener">
+            <i class="fa-brands fa-linkedin"></i>
+            <div><span>LinkedIn</span><p>linkedin.com/in/preethi-pj-810914250</p></div>
+          </a>
+          <div class="contact-line">
+            <i class="fa-solid fa-location-dot"></i>
+            <div><span>Location</span><p>Bengaluru, Karnataka, India</p></div>
+          </div>
+        </div>
+
+        <form class="contact-form glass-card" id="contact-form" novalidate>
+          <div class="form-row">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required>
+            <span class="form-error" id="name-error"></span>
+          </div>
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+            <span class="form-error" id="email-error"></span>
+          </div>
+          <div class="form-row">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" placeholder="Say hello..." required></textarea>
+            <span class="form-error" id="message-error"></span>
+          </div>
+          <button type="submit" class="btn btn-primary form-submit">
+            <span>Send Message</span><i class="fa-solid fa-paper-plane"></i>
+          </button>
+          <p class="form-status" id="form-status" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Designed &amp; built by Preethi P J · <span id="footer-year"></span></p>
+    <div class="footer-links">
+      <a href="mailto:preethipj23@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+      <a href="https://linkedin.com/in/preethi-pj-810914250" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="tel:+919353739605" aria-label="Phone"><i class="fa-solid fa-phone"></i></a>
+    </div>
+    <button class="back-to-top anchor-link" id="back-to-top" aria-label="Back to top" data-target="#home">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
