@@ -31,7 +31,7 @@ function initLoadingScreen() {
   const lines = [
     "Initializing interface...",
     "Establishing LAN handshake...",
-    "Loading skill modules [Java, React, Spring Boot]...",
+    "Loading skill modules [Java, Spring Boot]...",
     "Calibrating AI pipelines...",
     "Rendering portfolio.exe"
   ];
